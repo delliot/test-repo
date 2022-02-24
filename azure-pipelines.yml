@@ -29,8 +29,12 @@ steps:
     effectivePomSkip: false
     sonarQubeRunAnalysis: false
 
-- task: whitesource.WhiteSource-azure-devops-services.bolt.wss.WhiteSource@21
+- task: mergebase-task@3
   inputs:
-    cwd: '$(System.DefaultWorkingDirectory)'
-    projectName: 'test-repo'
-
+    ScanName: 'test-repo-azure'
+    CustomerServer: 'staging.mergebase.com'
+    CustomerToken: 'ukzfpKxFC-oLtPwIKvyGPMpf-9A9tEjUc'
+    ScanAllProjects: false
+    KillBuild: true
+    SeverityThreshold: '0.0'
+    DebugMode: false
