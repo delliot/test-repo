@@ -28,4 +28,4 @@ jobs:
       - name: download and run mergebase
         run: |
           wget --header="X-Authorization:${{ secrets.MB_STAGING_TOKEN }}" https://staging.mergebase.com/api/update/clt/mergebase.jar
-          java -jar mergebase.jar --name=${{github.repository}}@${{github.ref}} .
+          java -jar mergebase.jar --name=${{github.repository}}@${{github.ref}} --exitZero .
