@@ -33,7 +33,7 @@ jobs:
         uses: mergebase/mergebase-scan-action@1.0.4
         with:
         # name of your MB project
-          project_name: action_test
+          project_name: ${{github.repository}}-marketplaceAction
          # Customer token from your MB dashboard
           mb_token: ${{ secrets.MB_DEMO_TOKEN }}
         # Your dashboard URL in the form https://[domain].mergebase.com
