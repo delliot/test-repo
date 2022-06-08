@@ -29,3 +29,18 @@ jobs:
         run: |
           wget --header="X-Authorization:${{ secrets.MB_DEMO_TOKEN }}" https://demo.mergebase.com/api/update/clt/mergebase.jar
           java -jar mergebase.jar --name=${{github.repository}}@${{github.ref}} --exitZero .
+      - name: MergeBase
+        # You may pin to the exact commit or the version.
+        # uses: mergebase/mergebase-scan-action@8d5b99f95920de6d460f72944ce3e3d9202bec59
+        uses: mergebase/mergebase-scan-action@1.0.0
+        with:
+        # name of your MB project
+          project_name: action_test
+         # Customer token from your MB dashboard
+          mb_token: ${{ secrets.MB_DEMO_TOKEN }}
+        # Your dashboard URL in the form https://[domain].mergebase.com
+          mb_url: https://demo.mergebase.com
+        # additional command line arguments. See CLT user guide for list of available options
+          additional_args: --exitZero
+          
+  
