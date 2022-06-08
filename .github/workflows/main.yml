@@ -30,7 +30,7 @@ jobs:
           wget --header="X-Authorization:${{ secrets.MB_DEMO_TOKEN }}" https://demo.mergebase.com/api/update/clt/mergebase.jar
           java -jar mergebase.jar --name=${{github.repository}}@${{github.ref}} --exitZero .
       - name: MergeBase
-        uses: mergebase/mergebase-scan-action@1.0.3
+        uses: mergebase/mergebase-scan-action@1.0.4
         with:
         # name of your MB project
           project_name: action_test
