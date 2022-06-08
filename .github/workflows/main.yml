@@ -32,7 +32,7 @@ jobs:
       - name: MergeBase
         # You may pin to the exact commit or the version.
         # uses: mergebase/mergebase-scan-action@8d5b99f95920de6d460f72944ce3e3d9202bec59
-        uses: mergebase/mergebase-scan-action@1.0.0
+        uses: mergebase/mergebase-scan-action@1.0.1
         with:
         # name of your MB project
           project_name: action_test
