@@ -29,12 +29,4 @@ steps:
     effectivePomSkip: false
     sonarQubeRunAnalysis: false
 
-- task: mergebase-task@3
-  inputs:
-    ScanName: 'test-repo-azure'
-    CustomerServer: 'staging.mergebase.com'
-    CustomerToken: 'ukzfpKxFC-oLtPwIKvyGPMpf-9A9tEjUc'
-    ScanAllProjects: false
-    KillBuild: true
-    SeverityThreshold: '0.0'
-    DebugMode: false
+
