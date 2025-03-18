@@ -29,4 +29,11 @@ steps:
     effectivePomSkip: false
     sonarQubeRunAnalysis: false
 
-
+- task: mergebase-task@4
+  inputs:
+      ScanName: 'AzureTest'
+      CustomerServer: 'demo.mergebase.com'
+      CustomerToken: '1K76H7yfB0QWhtDm6s1kLoOeAvS_dYVQY'
+      ScanAllProjects: false
+      KillBuild: true
+      DebugMode: false
